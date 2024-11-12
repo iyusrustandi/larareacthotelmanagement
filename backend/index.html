@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link href="/src/output.css" rel="stylesheet" />
+    <!-- run tailwind -->
+    <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
+  </head>
+  <body>
+    <div class="flex">
+      <!-- Sidebar -->
+      <div id="sidebar-container"></div>
+      <!-- Sidebar will be loaded here -->
+
+      <!-- Main Content -->
+      <div class="flex-1 p-6">
+        <h2 class="text-3xl font-bold mb-4">Welcome to the Dashboard</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white shadow rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-2">Total Hotels</h3>
+            <p class="text-gray-600 text-2xl">15</p>
+          </div>
+          <div class="bg-white shadow rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-2">Total Rooms</h3>
+            <p class="text-gray-600 text-2xl">120</p>
+          </div>
+          <div class="bg-white shadow rounded-lg p-6">
+            <h3 class="text-xl font-semibold mb-2">Total Bookings</h3>
+            <p class="text-gray-600 text-2xl">350</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

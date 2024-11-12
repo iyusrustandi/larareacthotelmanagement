@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- run tailwind -->
+    <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
+  </head>
+  <body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <!-- Navbar -->
+    <nav class="bg-blue-500 p-4 text-white">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="text-2xl font-bold">Hotel Booking</div>
+        <div>
+          <a href="#home" class="px-3 hover:underline">Home</a>
+          <a href="#hotels" class="px-3 hover:underline">Hotels</a>
+          <a href="#about" class="px-3 hover:underline">About</a>
+          <a href="#contact" class="px-3 hover:underline">Contact</a>
+          <a href="#login" class="px-3 hover:underline">Login</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-cover bg-center h-96 flex items-center justify-center" style="background-image: url('https://source.unsplash.com/featured/?hotel')">
+      <div class="text-center">
+        <h1 class="text-5xl font-bold mb-4">Welcome to Our Hotel Platform</h1>
+        <p class="text-xl mb-6">Find and book the best hotels for your stay.</p>
+        <button class="bg-blue-500 py-2 px-4 rounded hover:bg-blue-700">Explore Now</button>
+      </div>
+    </section>
+
+    <!-- Hotels Section -->
+    <section id="hotels" class="container mx-auto py-12">
+      <h2 class="text-3xl font-bold mb-6">Our Hotels</h2>
+      <div class="scrolling-carousel">
+        <div class="hotel-card bg-white p-4 shadow rounded">
+          <img src="assets/hotels.jpg" alt="Hotel 1" class="w-full mb-2" />
+          <h2 class="text-xl font-semibold">Hotel Sunshine</h2>
+          <p>Location: Miami, FL</p>
+        </div>
+        <div class="hotel-card bg-white p-4 shadow rounded">
+          <img src="assets/hotels.jpg" alt="Hotel 2" class="w-full mb-2" />
+          <h2 class="text-xl font-semibold">Hotel Paradise</h2>
+          <p>Location: Orlando, FL</p>
+        </div>
+        <div class="hotel-card bg-white p-4 shadow rounded">
+          <img src="assets/hotels.jpg" alt="Hotel 3" class="w-full mb-2" />
+          <h2 class="text-xl font-semibold">Hotel Oceanview</h2>
+          <p>Location: Malibu, CA</p>
+        </div>
+        <div class="hotel-card bg-white p-4 shadow rounded">
+          <img src="assets/hotels.jpg" alt="Hotel 4" class="w-full mb-2" />
+          <h2 class="text-xl font-semibold">Hotel Oceanview</h2>
+          <p>Location: Malibu, CA</p>
+        </div>
+        <!-- Tambahkan lebih banyak hotel sesuai kebutuhan -->
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-200 py-12">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-6">About Us</h2>
+        <p class="text-gray-700">Our platform connects travelers with the best hotel experiences. Whether you seek luxury, comfort, or budget-friendly options, we have you covered with seamless booking and excellent customer service.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto py-12">
+      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+      <form class="bg-white shadow rounded-lg p-6">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700">Name</label>
+          <input type="text" id="name" class="w-full border rounded px-3 py-2" />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700">Email</label>
+          <input type="email" id="email" class="w-full border rounded px-3 py-2" />
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-gray-700">Message</label>
+          <textarea id="message" class="w-full border rounded px-3 py-2" rows="4"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-500 py-2 px-4 text-white rounded hover:bg-blue-700">Send</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-500 text-white py-4">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2024 Hotel Booking Platform. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
