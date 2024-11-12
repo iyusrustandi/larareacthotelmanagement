@@ -1,25 +1,15 @@
-// JavaScript functionality can be added as needed
-console.log('Dashboard loaded');
-
-// Function to load the sidebar dynamically using AJAX
-function loadSidebar() {
+document.addEventListener('DOMContentLoaded', function () {
   fetch('sidebar.html')
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById('sidebar-container').innerHTML = data;
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text();
     })
-    .catch((error) => console.error('Error loading sidebar:', error));
-}
-
-// Load sidebar on page load
-loadSidebar();
-
-console.log('Dashboard loaded');
-
-// sidebar toggle
-const sidebarToggle = document.getElementById('sidebar-toggle');
-const sidebar = document.getElementById('sidebar');
-
-sidebarToggle.addEventListener('click', () => {
-  sidebar.classList.toggle('hidden');
+    .then((html) => {
+      document.getElementById('sidebar-container').innerHTML = html;
+    })
+    .catch((error) => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
 });
