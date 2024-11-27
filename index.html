@@ -1,102 +1,167 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend</title>
-    <!-- <link href="src/output.css" rel="stylesheet" /> -->
-    <link href="style.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hotel Booking Landing Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- run tailwind -->
-    <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
   </head>
-  <body class="bg-gray-100 font-sans leading-normal tracking-normal">
-    <!-- Navbar -->
-    <nav class="bg-blue-500 p-4 text-white">
-      <div class="container mx-auto flex justify-between items-center">
-        <div class="text-2xl font-bold">Hotel Booking</div>
-        <div>
-          <a href="#home" class="px-3 hover:underline">Home</a>
-          <a href="#hotels" class="px-3 hover:underline">Hotels</a>
-          <a href="#about" class="px-3 hover:underline">About</a>
-          <a href="#contact" class="px-3 hover:underline">Contact</a>
-          <a href="#login" class="px-3 hover:underline">Login</a>
-        </div>
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md">
+      <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+        <a class="text-xl font-bold text-gray-800" href="#"> HotelFinder </a>
+        <ul class="flex space-x-4">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800" href="#"> Home </a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800" href="#"> About </a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800" href="#"> Contact </a>
+          </li>
+        </ul>
       </div>
     </nav>
-
     <!-- Hero Section -->
-    <section id="home" class="bg-cover bg-center h-96 flex items-center justify-center" style="background-image: url('https://source.unsplash.com/featured/?hotel')">
-      <div class="text-center">
-        <h1 class="text-5xl font-bold mb-4">Welcome to Our Hotel Platform</h1>
-        <p class="text-xl mb-6">Find and book the best hotels for your stay.</p>
-        <button class="bg-blue-500 py-2 px-4 rounded hover:bg-blue-700">Explore Now</button>
+    <section class="bg-blue-600 text-white py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold mb-4">Find and Book Your Perfect Hotel Room</h1>
+        <p class="text-lg mb-8">Discover the best hotels at unbeatable prices.</p>
+        <a class="bg-white text-blue-600 px-4 py-2 rounded-full font-semibold" href="#"> Get Started </a>
       </div>
     </section>
-
     <!-- Hotels Section -->
-    <section id="hotels" class="container mx-auto py-12">
-      <h2 class="text-3xl font-bold mb-6">Our Hotels</h2>
-      <div class="scrolling-carousel">
-        <div class="hotel-card bg-white p-4 shadow rounded">
-          <img src="assets/hotels.jpg" alt="Hotel 1" class="w-full mb-2" />
-          <h2 class="text-xl font-semibold">Hotel Sunshine</h2>
-          <p>Location: Miami, FL</p>
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold">Available Hotels</h2>
+          <p class="text-gray-600">Choose from a wide range of hotels</p>
         </div>
-        <div class="hotel-card bg-white p-4 shadow rounded">
-          <img src="assets/hotels.jpg" alt="Hotel 2" class="w-full mb-2" />
-          <h2 class="text-xl font-semibold">Hotel Paradise</h2>
-          <p>Location: Orlando, FL</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              alt="Hotel 1: A detailed description of the hotel image"
+              class="w-full h-40 object-cover rounded-t-lg mb-4"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/IEo4TTcxcTamF9DuAcuJiYp8t3ANyhoU07CUMIoaRNgZlT9E.jpg"
+              width="600"
+            />
+            <h3 class="text-xl font-bold mb-2">Hotel One</h3>
+            <p class="text-gray-600 mb-4">123 Main St, City, Country</p>
+            <a class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold" href="room-and-prices.html"> View Rooms &amp; Prices </a>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              alt="Hotel 2: A detailed description of the hotel image"
+              class="w-full h-40 object-cover rounded-t-lg mb-4"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/heF1HyRhVCRydSS7KpsFNrdYmFHYqG4VQRYeUeDA7TuFrcqnA.jpg"
+              width="600"
+            />
+            <h3 class="text-xl font-bold mb-2">Hotel Two</h3>
+            <p class="text-gray-600 mb-4">456 Elm St, City, Country</p>
+            <a class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold" href="room-and-prices.html"> View Rooms &amp; Prices </a>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              alt="Hotel 3: A detailed description of the hotel image"
+              class="w-full h-40 object-cover rounded-t-lg mb-4"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/fK4GPBTJFPUTEKcjmbeGcEnwfVCfUW2h12bioIsmwUjkW5UPB.jpg"
+              width="600"
+            />
+            <h3 class="text-xl font-bold mb-2">Hotel Three</h3>
+            <p class="text-gray-600 mb-4">789 Oak St, City, Country</p>
+            <a class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold" href="room-and-prices.html"> View Rooms &amp; Prices </a>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              alt="Hotel 4: A detailed description of the hotel image"
+              class="w-full h-40 object-cover rounded-t-lg mb-4"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/engD0FaeHssMfIKEvMejfSF0dyewYBuBLJfV8NhRhFbc1Kn6JA.jpg"
+              width="600"
+            />
+            <h3 class="text-xl font-bold mb-2">Hotel Four</h3>
+            <p class="text-gray-600 mb-4">101 Pine St, City, Country</p>
+            <a class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold" href="room-and-prices.html"> View Rooms &amp; Prices </a>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              alt="Hotel 5: A detailed description of the hotel image"
+              class="w-full h-40 object-cover rounded-t-lg mb-4"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/eaG5jl08slUva6Fzc8HGGLC3PkdGEHCfFcnAMSfb0FsArcqnA.jpg"
+              width="600"
+            />
+            <h3 class="text-xl font-bold mb-2">Hotel Five</h3>
+            <p class="text-gray-600 mb-4">202 Maple St, City, Country</p>
+            <a class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold" href="room-and-prices.html"> View Rooms &amp; Prices </a>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              alt="Hotel 6: A detailed description of the hotel image"
+              class="w-full h-40 object-cover rounded-t-lg mb-4"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/3CgwD8mzEuIUHBeLgGi5PgffR1TJmR6tUUStNCiHEsfMW5UPB.jpg"
+              width="600"
+            />
+            <h3 class="text-xl font-bold mb-2">Hotel Six</h3>
+            <p class="text-gray-600 mb-4">303 Birch St, City, Country</p>
+            <a class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold" href="room-and-prices.html"> View Rooms &amp; Prices </a>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              alt="Hotel 7: A detailed description of the hotel image"
+              class="w-full h-40 object-cover rounded-t-lg mb-4"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/illmFFnjIb7nE9OT4PZIRsBL0foN3G375clKdLAfxJFsVO1TA.jpg"
+              width="600"
+            />
+            <h3 class="text-xl font-bold mb-2">Hotel Seven</h3>
+            <p class="text-gray-600 mb-4">404 Cedar St, City, Country</p>
+            <a class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold" href="room-and-prices.html"> View Rooms &amp; Prices </a>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              alt="Hotel 8: A detailed description of the hotel image"
+              class="w-full h-40 object-cover rounded-t-lg mb-4"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/zufy6SPJeluryEJqjnLXG7q15rzG83B383azqoOtGmooVO1TA.jpg"
+              width="600"
+            />
+            <h3 class="text-xl font-bold mb-2">Hotel Eight</h3>
+            <p class="text-gray-600 mb-4">505 Spruce St, City, Country</p>
+            <a class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold" href="room-and-prices.html"> View Rooms &amp; Prices </a>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <img
+              alt="Hotel 9: A detailed description of the hotel image"
+              class="w-full h-40 object-cover rounded-t-lg mb-4"
+              height="400"
+              src="https://storage.googleapis.com/a1aa/image/BK8EfeEijDhjiEHhuriXX5gmAFjiePqop0JFgCrtI3BLrcqnA.jpg"
+              width="600"
+            />
+            <h3 class="text-xl font-bold mb-2">Hotel Nine</h3>
+            <p class="text-gray-600 mb-4">606 Willow St, City, Country</p>
+            <a class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold" href="room-and-prices.html"> View Rooms &amp; Prices </a>
+          </div>
         </div>
-        <div class="hotel-card bg-white p-4 shadow rounded">
-          <img src="assets/hotels.jpg" alt="Hotel 3" class="w-full mb-2" />
-          <h2 class="text-xl font-semibold">Hotel Oceanview</h2>
-          <p>Location: Malibu, CA</p>
-        </div>
-        <div class="hotel-card bg-white p-4 shadow rounded">
-          <img src="assets/hotels.jpg" alt="Hotel 4" class="w-full mb-2" />
-          <h2 class="text-xl font-semibold">Hotel Oceanview</h2>
-          <p>Location: Malibu, CA</p>
-        </div>
-        <!-- Tambahkan lebih banyak hotel sesuai kebutuhan -->
       </div>
     </section>
-
-    <!-- About Section -->
-    <section id="about" class="bg-gray-200 py-12">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold mb-6">About Us</h2>
-        <p class="text-gray-700">Our platform connects travelers with the best hotel experiences. Whether you seek luxury, comfort, or budget-friendly options, we have you covered with seamless booking and excellent customer service.</p>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container mx-auto py-12">
-      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-      <form class="bg-white shadow rounded-lg p-6">
-        <div class="mb-4">
-          <label for="name" class="block text-gray-700">Name</label>
-          <input type="text" id="name" class="w-full border rounded px-3 py-2" />
-        </div>
-        <div class="mb-4">
-          <label for="email" class="block text-gray-700">Email</label>
-          <input type="email" id="email" class="w-full border rounded px-3 py-2" />
-        </div>
-        <div class="mb-4">
-          <label for="message" class="block text-gray-700">Message</label>
-          <textarea id="message" class="w-full border rounded px-3 py-2" rows="4"></textarea>
-        </div>
-        <button type="submit" class="bg-blue-500 py-2 px-4 text-white rounded hover:bg-blue-700">Send</button>
-      </form>
-    </section>
-
     <!-- Footer -->
-    <footer class="bg-blue-500 text-white py-4">
-      <div class="container mx-auto text-center">
-        <p>&copy; 2024 Hotel Booking Platform. All rights reserved.</p>
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="container mx-auto px-4 text-center">
+        <p>© 2023 HotelFinder. All rights reserved.</p>
       </div>
     </footer>
-
-    <script src="./node_modules/preline/dist/preline.js"></script>
   </body>
 </html>
