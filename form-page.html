@@ -14,22 +14,8 @@
   </head>
   <body class="bg-gray-100 text-gray-900">
     <!-- Navigation Bar -->
-    <nav class="bg-white shadow-md">
-      <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-        <a class="text-xl font-bold text-gray-800" href="#"> HotelFinder </a>
-        <ul class="flex space-x-4">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800" href="#"> Home </a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800" href="#"> About </a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800" href="#"> Contact </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div id="navbar"></div>
+
     <!-- Booking Form Section -->
     <section class="py-20">
       <div class="container mx-auto px-4">
@@ -37,56 +23,116 @@
           <h2 class="text-3xl font-bold">Book Your Stay</h2>
           <p class="text-gray-600">Fill in the details below to book your room</p>
         </div>
-        <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
-          <form>
-            <div class="mb-4">
-              <label class="block text-gray-700 font-bold mb-2" for="name"> Name </label>
-              <input class="w-full px-3 py-2 border rounded-lg" id="name" name="name" type="text" />
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 font-bold mb-2" for="email"> E-mail </label>
-              <input class="w-full px-3 py-2 border rounded-lg" id="email" name="email" type="email" />
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 font-bold mb-2" for="phone"> Phone Number </label>
-              <input class="w-full px-3 py-2 border rounded-lg" id="phone" name="phone" type="tel" />
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 font-bold mb-2" for="start-date"> Start Booking Date </label>
-              <input class="w-full px-3 py-2 border rounded-lg" id="start-date" name="start-date" type="date" />
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 font-bold mb-2" for="end-date"> End Booking Date </label>
-              <input class="w-full px-3 py-2 border rounded-lg" id="end-date" name="end-date" type="date" />
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 font-bold mb-2" for="price-per-day"> Price Per Day </label>
-              <input class="w-full px-3 py-2 border rounded-lg" id="price-per-day" name="price-per-day" type="number" value="100" readonly />
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 font-bold mb-2" for="discount"> Discount </label>
-              <input class="w-full px-3 py-2 border rounded-lg" id="discount" name="discount" type="number" value="0" />
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 font-bold mb-2" for="promo-code"> Promo Code </label>
-              <input class="w-full px-3 py-2 border rounded-lg" id="promo-code" name="promo-code" type="text" />
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 font-bold mb-2" for="amount"> Amount </label>
-              <input class="w-full px-3 py-2 border rounded-lg" id="amount" name="amount" type="number" value="100" readonly />
-            </div>
-            <div class="text-center">
-              <button class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold" type="submit">Book Now</button>
-            </div>
-          </form>
+        <div class="flex items-center justify-center p-12">
+          <!-- Author: FormBold Team -->
+          <div class="mx-auto w-full max-w-[550px] bg-white">
+            <form>
+              <div class="mb-5">
+                <label for="name" class="mb-3 block text-base font-medium text-[#07074D]"> Full Name </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Full Name"
+                  class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
+              </div>
+              <div class="mb-5">
+                <label for="phone" class="mb-3 block text-base font-medium text-[#07074D]"> Phone Number </label>
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                  class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
+              </div>
+              <div class="mb-5">
+                <label for="email" class="mb-3 block text-base font-medium text-[#07074D]"> Email Address </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
+              </div>
+              <div class="-mx-3 flex flex-wrap">
+                <div class="w-full px-3 sm:w-1/2">
+                  <div class="mb-5">
+                    <label for="date" class="mb-3 block text-base font-medium text-[#07074D]"> Date </label>
+                    <input type="date" name="date" id="date" class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                  </div>
+                </div>
+                <div class="w-full px-3 sm:w-1/2">
+                  <div class="mb-5">
+                    <label for="time" class="mb-3 block text-base font-medium text-[#07074D]"> Time </label>
+                    <input type="time" name="time" id="time" class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-5 pt-3">
+                <label class="mb-5 block text-base font-semibold text-[#07074D] sm:text-xl"> Address Details </label>
+                <div class="-mx-3 flex flex-wrap">
+                  <div class="w-full px-3 sm:w-1/2">
+                    <div class="mb-5">
+                      <input
+                        type="text"
+                        name="area"
+                        id="area"
+                        placeholder="Enter area"
+                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-full px-3 sm:w-1/2">
+                    <div class="mb-5">
+                      <input
+                        type="text"
+                        name="city"
+                        id="city"
+                        placeholder="Enter city"
+                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-full px-3 sm:w-1/2">
+                    <div class="mb-5">
+                      <input
+                        type="text"
+                        name="state"
+                        id="state"
+                        placeholder="Enter state"
+                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-full px-3 sm:w-1/2">
+                    <div class="mb-5">
+                      <input
+                        type="text"
+                        name="post-code"
+                        id="post-code"
+                        placeholder="Post Code"
+                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <a href="checkout-page.html" class="hover:shadow-form w-full rounded-md bg-blue-600 py-3 px-8 text-center text-base font-semibold text-white outline-none">Book Appointment</a>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
-      <div class="container mx-auto px-4 text-center">
-        <p>© 2023 HotelFinder. All rights reserved.</p>
-      </div>
-    </footer>
+    <div id="footer"></div>
+
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

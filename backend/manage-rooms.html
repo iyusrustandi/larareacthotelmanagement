@@ -1,24 +1,188 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manage Hotels</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Manage Rooms - HotelFinder</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Dashboard Section -->
     <div class="flex">
       <!-- Sidebar -->
-      <div id="sidebar-container"></div>
-      <!-- Sidebar will be loaded here -->
+      <div id="sidebar"></div>
 
       <!-- Main Content -->
-      <div class="flex-1 p-6">
-        <h2 class="text-3xl font-bold mb-4">Manage Rooms</h2>
-        <p class="text-gray-700">This page is where you can manage rooms information.</p>
+      <main class="flex-1 p-10">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold">Manage Rooms</h2>
+          <p class="text-gray-600">View and manage room data</p>
+        </div>
+        <div class="flex justify-between items-center mb-4">
+          <div>
+            <input type="text" placeholder="Search rooms..." class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+          </div>
+          <div>
+            <button class="hover:shadow-form rounded-md bg-[#6A64F1] py-2 px-4 text-center text-base font-semibold text-white outline-none">Add Room</button>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-white rounded-md shadow-md">
+            <thead>
+              <tr>
+                <th class="py-2 px-4 border-b">Room Number</th>
+                <th class="py-2 px-4 border-b">Type</th>
+                <th class="py-2 px-4 border-b">Price</th>
+                <th class="py-2 px-4 border-b">Status</th>
+                <th class="py-2 px-4 border-b">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-2 px-4 border-b">101</td>
+                <td class="py-2 px-4 border-b">Single</td>
+                <td class="py-2 px-4 border-b">$100</td>
+                <td class="py-2 px-4 border-b">Available</td>
+                <td class="py-2 px-4 border-b">
+                  <a href="#" class="text-blue-500 hover:underline" onclick="openEditModal('101', 'Single', 100, 'Available')">Edit</a> |
+                  <a href="#" class="text-red-500 hover:underline" onclick="openDeleteModal('101')">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4 border-b">102</td>
+                <td class="py-2 px-4 border-b">Double</td>
+                <td class="py-2 px-4 border-b">$150</td>
+                <td class="py-2 px-4 border-b">Occupied</td>
+                <td class="py-2 px-4 border-b">
+                  <a href="#" class="text-blue-500 hover:underline" onclick="openEditModal('102', 'Double', 150, 'Occupied')">Edit</a> |
+                  <a href="#" class="text-red-500 hover:underline" onclick="openDeleteModal('102')">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4 border-b">103</td>
+                <td class="py-2 px-4 border-b">Suite</td>
+                <td class="py-2 px-4 border-b">$200</td>
+                <td class="py-2 px-4 border-b">Available</td>
+                <td class="py-2 px-4 border-b">
+                  <a href="#" class="text-blue-500 hover:underline" onclick="openEditModal('103', 'Suite', 200, 'Available')">Edit</a> |
+                  <a href="#" class="text-red-500 hover:underline" onclick="openDeleteModal('103')">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4 border-b">104</td>
+                <td class="py-2 px-4 border-b">Single</td>
+                <td class="py-2 px-4 border-b">$100</td>
+                <td class="py-2 px-4 border-b">Occupied</td>
+                <td class="py-2 px-4 border-b">
+                  <a href="#" class="text-blue-500 hover:underline" onclick="openEditModal('104', 'Single', 100, 'Occupied')">Edit</a> |
+                  <a href="#" class="text-red-500 hover:underline" onclick="openDeleteModal('104')">Delete</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-2 px-4 border-b">105</td>
+                <td class="py-2 px-4 border-b">Double</td>
+                <td class="py-2 px-4 border-b">$150</td>
+                <td class="py-2 px-4 border-b">Available</td>
+                <td class="py-2 px-4 border-b">
+                  <a href="#" class="text-blue-500 hover:underline" onclick="openEditModal('105', 'Double', 150, 'Available')">Edit</a> |
+                  <a href="#" class="text-red-500 hover:underline" onclick="openDeleteModal('105')">Delete</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Pagination -->
+        <div class="flex justify-between items-center mt-4">
+          <div>
+            <p class="text-gray-600">Showing 1 to 5 of 50 entries</p>
+          </div>
+          <div>
+            <nav class="inline-flex">
+              <a href="#" class="px-3 py-2 mx-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300">Previous</a>
+              <a href="#" class="px-3 py-2 mx-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300">1</a>
+              <a href="#" class="px-3 py-2 mx-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300">2</a>
+              <a href="#" class="px-3 py-2 mx-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300">3</a>
+              <a href="#" class="px-3 py-2 mx-1 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300">Next</a>
+            </nav>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- Edit Modal -->
+    <div id="editModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden justify-center items-center">
+      <div class="bg-white p-6 rounded-md shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-4">Edit Room</h2>
+        <form>
+          <div class="mb-4">
+            <label for="roomNumber" class="block text-gray-700">Room Number</label>
+            <input type="text" id="roomNumber" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+          </div>
+          <div class="mb-4">
+            <label for="roomType" class="block text-gray-700">Type</label>
+            <input type="text" id="roomType" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+          </div>
+          <div class="mb-4">
+            <label for="roomPrice" class="block text-gray-700">Price</label>
+            <input type="number" id="roomPrice" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+          </div>
+          <div class="mb-4">
+            <label for="roomStatus" class="block text-gray-700">Status</label>
+            <input type="text" id="roomStatus" class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+          </div>
+          <div class="flex justify-end">
+            <button type="button" class="mr-2 px-4 py-2 bg-gray-300 rounded-md hover:bg-gray-400" onclick="closeEditModal()">Cancel</button>
+            <button type="submit" class="px-4 py-2 bg-[#6A64F1] text-white rounded-md hover:bg-[#5a54d1]">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Delete Modal -->
+    <div id="deleteModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden justify-center items-center">
+      <div class="bg-white p-6 rounded-md shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-4">Delete Room</h2>
+        <p class="text-gray-700 mb-4">Are you sure you want to delete room <span id="deleteRoomNumber" class="font-bold"></span>?</p>
+        <div class="flex justify-end">
+          <button type="button" class="mr-2 px-4 py-2 bg-gray-300 rounded-md hover:bg-gray-400" onclick="closeDeleteModal()">Cancel</button>
+          <button type="button" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">Delete</button>
+        </div>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+      function openEditModal(roomNumber, roomType, roomPrice, roomStatus) {
+        document.getElementById('roomNumber').value = roomNumber;
+        document.getElementById('roomType').value = roomType;
+        document.getElementById('roomPrice').value = roomPrice;
+        document.getElementById('roomStatus').value = roomStatus;
+        document.getElementById('editModal').classList.remove('hidden');
+        document.getElementById('editModal').classList.add('flex');
+      }
+
+      function closeEditModal() {
+        document.getElementById('editModal').classList.add('hidden');
+        document.getElementById('editModal').classList.remove('flex');
+      }
+
+      function openDeleteModal(roomNumber) {
+        document.getElementById('deleteRoomNumber').innerText = roomNumber;
+        document.getElementById('deleteModal').classList.remove('hidden');
+        document.getElementById('deleteModal').classList.add('flex');
+      }
+
+      function closeDeleteModal() {
+        document.getElementById('deleteModal').classList.add('hidden');
+        document.getElementById('deleteModal').classList.remove('flex');
+      }
+    </script>
   </body>
 </html>

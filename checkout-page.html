@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Checkout - HotelFinder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Checkout Form Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold">Checkout</h2>
+          <p class="text-gray-600">Complete your booking by providing payment details</p>
+        </div>
+        <div class="flex items-center justify-center p-12">
+          <div class="mx-auto w-full max-w-[550px] bg-white">
+            <form>
+              <div class="mb-5">
+                <label for="card-name" class="mb-3 block text-base font-medium text-[#07074D]"> Name on Card </label>
+                <input
+                  type="text"
+                  name="card-name"
+                  id="card-name"
+                  placeholder="Name on Card"
+                  class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
+              </div>
+              <div class="mb-5">
+                <label for="card-number" class="mb-3 block text-base font-medium text-[#07074D]"> Card Number </label>
+                <input
+                  type="text"
+                  name="card-number"
+                  id="card-number"
+                  placeholder="Card Number"
+                  class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
+              </div>
+              <div class="-mx-3 flex flex-wrap">
+                <div class="w-full px-3 sm:w-1/2">
+                  <div class="mb-5">
+                    <label for="expiry-date" class="mb-3 block text-base font-medium text-[#07074D]"> Expiry Date </label>
+                    <input
+                      type="text"
+                      name="expiry-date"
+                      id="expiry-date"
+                      placeholder="MM/YY"
+                      class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    />
+                  </div>
+                </div>
+                <div class="w-full px-3 sm:w-1/2">
+                  <div class="mb-5">
+                    <label for="cvv" class="mb-3 block text-base font-medium text-[#07074D]"> CVV </label>
+                    <input type="text" name="cvv" id="cvv" placeholder="CVV" class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <a href="success-page.html" class="hover:shadow-form w-full rounded-md bg-blue-600 py-3 px-8 text-center text-base font-semibold text-white outline-none">Complete Booking</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

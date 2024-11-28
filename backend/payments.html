@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Customers - HotelFinder</title>
+    <title>Payments - HotelFinder</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
@@ -24,67 +24,73 @@
       <!-- Main Content -->
       <main class="flex-1 p-10">
         <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold">Customers</h2>
-          <p class="text-gray-600">Manage customer data including profiles, bookings, and more.</p>
+          <h2 class="text-3xl font-bold">Payments</h2>
+          <p class="text-gray-600">Manage payment data including transactions, refunds, and more.</p>
         </div>
         <div class="bg-white p-6 rounded-md shadow-md">
           <div class="flex justify-between items-center mb-6">
-            <h3 class="text-xl font-semibold text-[#07074D]">Customer List</h3>
-            <a href="#" class="bg-[#6A64F1] text-white px-4 py-2 rounded-md hover:bg-[#5a54d1]">Add Customer</a>
+            <h3 class="text-xl font-semibold text-[#07074D]">Payment List</h3>
+            <a href="#" class="bg-[#6A64F1] text-white px-4 py-2 rounded-md hover:bg-[#5a54d1]">Add Payment</a>
           </div>
           <table class="min-w-full bg-white">
             <thead>
               <tr>
-                <th class="py-2 px-4 border-b border-gray-200">Name</th>
-                <th class="py-2 px-4 border-b border-gray-200">Email</th>
-                <th class="py-2 px-4 border-b border-gray-200">Phone</th>
+                <th class="py-2 px-4 border-b border-gray-200">Customer Name</th>
+                <th class="py-2 px-4 border-b border-gray-200">Amount</th>
+                <th class="py-2 px-4 border-b border-gray-200">Date</th>
+                <th class="py-2 px-4 border-b border-gray-200">Status</th>
                 <th class="py-2 px-4 border-b border-gray-200">Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="py-2 px-4 border-b border-gray-200">John Doe</td>
-                <td class="py-2 px-4 border-b border-gray-200">john.doe@example.com</td>
-                <td class="py-2 px-4 border-b border-gray-200">123-456-7890</td>
+                <td class="py-2 px-4 border-b border-gray-200">$200.00</td>
+                <td class="py-2 px-4 border-b border-gray-200">2023-10-01</td>
+                <td class="py-2 px-4 border-b border-gray-200">Completed</td>
                 <td class="py-2 px-4 border-b border-gray-200">
                   <a href="#" class="text-[#6A64F1] hover:underline">Edit</a> |
-                  <a href="#" class="text-red-600 hover:underline">Delete</a>
+                  <a href="#" class="text-red-600 hover:underline">Refund</a>
                 </td>
               </tr>
               <tr>
                 <td class="py-2 px-4 border-b border-gray-200">Jane Smith</td>
-                <td class="py-2 px-4 border-b border-gray-200">jane.smith@example.com</td>
-                <td class="py-2 px-4 border-b border-gray-200">987-654-3210</td>
+                <td class="py-2 px-4 border-b border-gray-200">$150.00</td>
+                <td class="py-2 px-4 border-b border-gray-200">2023-10-10</td>
+                <td class="py-2 px-4 border-b border-gray-200">Pending</td>
                 <td class="py-2 px-4 border-b border-gray-200">
                   <a href="#" class="text-[#6A64F1] hover:underline">Edit</a> |
-                  <a href="#" class="text-red-600 hover:underline">Delete</a>
+                  <a href="#" class="text-red-600 hover:underline">Refund</a>
                 </td>
               </tr>
               <tr>
                 <td class="py-2 px-4 border-b border-gray-200">Alice Johnson</td>
-                <td class="py-2 px-4 border-b border-gray-200">alice.johnson@example.com</td>
-                <td class="py-2 px-4 border-b border-gray-200">555-123-4567</td>
+                <td class="py-2 px-4 border-b border-gray-200">$300.00</td>
+                <td class="py-2 px-4 border-b border-gray-200">2023-11-01</td>
+                <td class="py-2 px-4 border-b border-gray-200">Completed</td>
                 <td class="py-2 px-4 border-b border-gray-200">
                   <a href="#" class="text-[#6A64F1] hover:underline">Edit</a> |
-                  <a href="#" class="text-red-600 hover:underline">Delete</a>
+                  <a href="#" class="text-red-600 hover:underline">Refund</a>
                 </td>
               </tr>
               <tr>
                 <td class="py-2 px-4 border-b border-gray-200">Bob Brown</td>
-                <td class="py-2 px-4 border-b border-gray-200">bob.brown@example.com</td>
-                <td class="py-2 px-4 border-b border-gray-200">444-555-6666</td>
+                <td class="py-2 px-4 border-b border-gray-200">$250.00</td>
+                <td class="py-2 px-4 border-b border-gray-200">2023-12-01</td>
+                <td class="py-2 px-4 border-b border-gray-200">Cancelled</td>
                 <td class="py-2 px-4 border-b border-gray-200">
                   <a href="#" class="text-[#6A64F1] hover:underline">Edit</a> |
-                  <a href="#" class="text-red-600 hover:underline">Delete</a>
+                  <a href="#" class="text-red-600 hover:underline">Refund</a>
                 </td>
               </tr>
               <tr>
                 <td class="py-2 px-4 border-b border-gray-200">Charlie Davis</td>
-                <td class="py-2 px-4 border-b border-gray-200">charlie.davis@example.com</td>
-                <td class="py-2 px-4 border-b border-gray-200">333-222-1111</td>
+                <td class="py-2 px-4 border-b border-gray-200">$100.00</td>
+                <td class="py-2 px-4 border-b border-gray-200">2023-12-10</td>
+                <td class="py-2 px-4 border-b border-gray-200">Pending</td>
                 <td class="py-2 px-4 border-b border-gray-200">
                   <a href="#" class="text-[#6A64F1] hover:underline">Edit</a> |
-                  <a href="#" class="text-red-600 hover:underline">Delete</a>
+                  <a href="#" class="text-red-600 hover:underline">Refund</a>
                 </td>
               </tr>
             </tbody>

@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us - HotelFinder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+
+    <!-- Contact Us Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold">Contact Us</h2>
+          <p class="text-gray-600">We'd love to hear from you! Please fill out the form below to get in touch.</p>
+        </div>
+        <div class="flex items-center justify-center p-12">
+          <div class="mx-auto w-full max-w-[550px] bg-white p-8 rounded-md shadow-md">
+            <form>
+              <div class="mb-5">
+                <label for="name" class="mb-3 block text-base font-medium text-[#07074D]"> Full Name </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Full Name"
+                  class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
+              </div>
+              <div class="mb-5">
+                <label for="email" class="mb-3 block text-base font-medium text-[#07074D]"> Email Address </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                />
+              </div>
+              <div class="mb-5">
+                <label for="message" class="mb-3 block text-base font-medium text-[#07074D]"> Message </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Enter your message"
+                  class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                  rows="5"
+                ></textarea>
+              </div>
+              <div>
+                <button class="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
